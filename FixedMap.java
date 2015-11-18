@@ -31,7 +31,7 @@ public class FixedMap {
 		// Java's standard way of making a collection immutable
 		unmodifiable = Collections.unmodifiableMap(modifiable);
 		// One of Google Guava's way of creating an immutable collection
-		immutable = ImmutableMap.copyOf(modifiable);
+		immutable = ImmutableMap.<String, Set<String>> builder().putAll(modifiable).build();
 	}
 
 	/** give access to modifiable map to demonstrate the difference in behavior 
