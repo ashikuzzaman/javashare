@@ -11,7 +11,7 @@ A little older or later version wont' harm.
 
 4) To compile the command is: javac -d . *.java
 
-5) To compile the command is: java com.java.share.collection.FixedMapRunner
+5) To run the command is: java com.java.share.collection.FixedMapRunner
 
 For any issue with the program, please email me at ashikuzzaman@gmail.com
 
