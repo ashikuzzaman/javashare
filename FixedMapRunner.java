@@ -25,38 +25,38 @@ public class FixedMapRunner {
 		birds.add("crow");
 
 		// test the size of the maps
-		System.out.println("Before adding new element birds, dataHolder.getKeySetForUnmodifiable().size() = " + dataHolder.getKeySetForUnmodifiable().size());
-		System.out.println("Before adding new element birds, dataHolder.getKeySetForImmutable().size() = " + dataHolder.getKeySetForImmutable().size());
+		System.out.println("1: Before adding new element birds, dataHolder.getKeySetForUnmodifiable().size() = " + dataHolder.getKeySetForUnmodifiable().size());
+		System.out.println("2: Before adding new element birds, dataHolder.getKeySetForImmutable().size() = " + dataHolder.getKeySetForImmutable().size());
 	
 		dataHolder.getModifiableMap().put("birds", birds);
 	
-		System.out.println("After adding new element birds, dataHolder.getKeySetForUnmodifiable().size() = " + dataHolder.getKeySetForUnmodifiable().size());
-		System.out.println("After adding new element birds, dataHolder.getKeySetForImmutable().size() = " + dataHolder.getKeySetForImmutable().size());
+		System.out.println("3: After adding new element birds, dataHolder.getKeySetForUnmodifiable().size() = " + dataHolder.getKeySetForUnmodifiable().size());
+		System.out.println("4: After adding new element birds, dataHolder.getKeySetForImmutable().size() = " + dataHolder.getKeySetForImmutable().size());
 
 		// test the values/contents of the maps 
-		System.out.println("Before adding new animal value to unmodifiable, total animals = " + dataHolder.getUnmodifiable("animals").size());
-		System.out.println("Before adding new animal value to immutable, total animals = " + dataHolder.getImmutable("animals").size());
+		System.out.println("5: Before adding new animal value to unmodifiable, total animals = " + dataHolder.getUnmodifiable("animals").size());
+		System.out.println("6: Before adding new animal value to immutable, total animals = " + dataHolder.getImmutable("animals").size());
 	
 		dataHolder.getUnmodifiable("animals").add("tiger");
 		dataHolder.getImmutable("animals").add("elephant");
 	
-		System.out.println("After adding new animal value to unmodifiable total animals = " + dataHolder.getUnmodifiable("animals").size());
-		System.out.println("After adding new animal value to immutable total animals = " + dataHolder.getImmutable("animals").size());
+		System.out.println("7: After adding new animal value to unmodifiable total animals = " + dataHolder.getUnmodifiable("animals").size());
+		System.out.println("8: After adding new animal value to immutable total animals = " + dataHolder.getImmutable("animals").size());
 
 		// test the values/contents of the maps with truly fixed content map
 		dataHolder = new FixedContentMap();
 		dataHolder.populateData();
 
-		System.out.println("Before adding new animal value to modifiable, total animals = " + dataHolder.getModifiableMap().get("animals").size());
+		System.out.println("9: Before adding new animal value to modifiable, total animals = " + dataHolder.getModifiableMap().get("animals").size());
 
 		dataHolder.getModifiableMap().get("animals").add("monkey");
 
-		System.out.println("After adding new animal value to modifiable, total animals = " + dataHolder.getModifiableMap().get("animals").size());
-		System.out.println("After adding new animal value to modifiable, total animals for immutable = " + dataHolder.getImmutable("animals").size());
+		System.out.println("10: After adding new animal value to modifiable, total animals = " + dataHolder.getModifiableMap().get("animals").size());
+		System.out.println("11: After adding new animal value to modifiable, total animals for immutable = " + dataHolder.getImmutable("animals").size());
 
 		dataHolder.getImmutable("animals").add("zebra");
 
-		System.out.println("After adding new animal value to immutable total animals = " + dataHolder.getImmutable("animals").size());
+		System.out.println("12: After adding new animal value to immutable total animals = " + dataHolder.getImmutable("animals").size());
 
 	}
 
